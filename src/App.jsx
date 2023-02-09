@@ -29,7 +29,7 @@ function App() {
 					}
 				/>
 
-				<Route
+				{/* <Route
 					path="user-grid"
 					element={
 						<>
@@ -38,7 +38,7 @@ function App() {
 							<UserGridPageContent />
 						</>
 					}
-				/>
+				/> */}
 
 				<Route
 					path="elements"
