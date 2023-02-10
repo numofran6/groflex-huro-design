@@ -4,7 +4,7 @@ import React from 'react';
 
 export const Input = ({
 	placeholder,
-	focus,
+	focusType,
 	helpText,
 	isRounded,
 	hasIcon,
@@ -12,27 +12,24 @@ export const Input = ({
 	hasValidation,
 	hasSuccess,
 	hasError,
+	iconType,
 	...rest
 }) => {
 	const getFocusType = () => {
-		if (focus === 'primary') {
-			return 'is-primary-focus';
-		}
-
-		if (focus === 'success') {
-			return 'is-success-focus';
-		}
-
-		if (focus === 'info') {
-			return 'is-info-focus';
-		}
-
-		if (focus === 'warning') {
-			return 'is-warning-focus';
-		}
-
-		if (focus === 'danger') {
-			return 'is-danger-focus';
+		switch (focusType) {
+			case 'primary':
+				return 'is-primary-focus';
+			case 'success':
+				return 'is-success-focus';
+			case 'info':
+				return 'is-info-focus';
+			case 'warning':
+				return 'is-warning-focus';
+			case 'danger':
+				return 'is-danger-focus';
+			default: {
+				return '';
+			}
 		}
 	};
 
@@ -44,31 +41,23 @@ export const Input = ({
 		}
 	};
 
-	const getControlCalssOptions = () => {
+	const getControlClassOptions = () => {
 		const classes = [];
 
-		if (hasIcon) {
-			classes.push('has-icon');
-		}
+		hasIcon && classes.push('has-icon');
 
-		if (isLoading) {
-			classes.push('is-loading');
-		}
+		isLoading && classes.push('is-loading');
 
-		if (hasValidation && hasSuccess) {
-			classes.push('has-validation has-success');
-		}
+		hasValidation && hasSuccess && classes.push('has-validation has-success');
 
-		if (hasValidation && hasError) {
-			classes.push('has-validation has-error');
-		}
+		hasValidation && hasError && classes.push('has-validation has-error');
 
 		return classes.join(' ');
 	};
 
 	return (
 		<div className="field">
-			<div className={`control ${getControlCalssOptions()}`}>
+			<div className={`control ${getControlClassOptions()}`}>
 				<input
 					type="text"
 					className={`input ${getFocusType()} ${getInputClassOptions()}`}
@@ -78,24 +67,9 @@ export const Input = ({
 
 				{/* Icon */}
 				{hasIcon && (
-					<div className="form-icon">
-						<i className="fab fa-twitter">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								strokeWidth="2"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								className="feather feather-twitter"
-							>
-								<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-							</svg>
-						</i>
-					</div>
+					<span className="form-icon">
+						<i data-feather={iconType}></i>
+					</span>
 				)}
 
 				{/* Validation Success */}

@@ -4,17 +4,11 @@ export const HAction = ({ children, isRounded, isHover, isGrey }) => {
 	const getActionClasses = () => {
 		const classes = [];
 
-		if (isRounded) {
-			classes.push('is-rounded');
-		}
+		isRounded && classes.push('is-rounded');
 
-		if (isHover) {
-			classes.push('is-hoverable');
-		}
+		isHover && classes.push('is-hoverable');
 
-		if (isGrey) {
-			classes.push('is-grey');
-		}
+		isGrey && classes.push('is-grey');
 
 		return classes.join(' ');
 	};

@@ -17,87 +17,46 @@ export const Button = ({
 	isOutlined,
 	isLoading,
 	elevated,
-	raised,
+	isRaised,
 	icon,
 	iconSmall,
 	isWhite,
 	isDisabled,
+	isFullWidth,
+	iconType,
 	...rest
 }) => {
 	const getButtonClasses = () => {
 		const classes = [];
 
-		if (isCircle) {
-			classes.push('is-circle');
-		}
+		isCircle && classes.push('is-circle');
+		isRounded && classes.push('is-rounded');
 
-		if (isBold) {
-			classes.push('is-bold');
-		}
+		// Color Options
+		isPrimary && classes.push('is-primary');
+		isSuccess && classes.push('is-success');
+		isInfo && classes.push('is-info');
+		isWarning && classes.push('is-warning');
+		isDanger && classes.push('is-danger');
+		isWhite && classes.push('is-white');
+		isLight && classes.push('is-light');
 
-		if (isPrimary) {
-			classes.push('is-primary');
-		}
+		isRaised && classes.push('is-raised');
+		elevated && classes.push('is-elevated');
 
-		if (isSuccess) {
-			classes.push('is-success');
-		}
+		textLower && classes.push('is-lower');
+		isBold && classes.push('is-bold');
 
-		if (isInfo) {
-			classes.push('is-info');
-		}
+		isBig && classes.push('is-big');
+		isHuge && classes.push('is-huge');
 
-		if (isWarning) {
-			classes.push('is-warning');
-		}
+		isOutlined && classes.push('is-outlined');
 
-		if (isDanger) {
-			classes.push('is-danger');
-		}
+		isLoading && classes.push('is-loading');
 
-		if (isWhite) {
-			classes.push('is-white');
-		}
+		isDisabled && classes.push('is-disabled');
 
-		if (raised) {
-			classes.push('is-raised');
-		}
-
-		if (elevated) {
-			classes.push('is-elevated');
-		}
-
-		if (textLower) {
-			classes.push('is-lower');
-		}
-
-		if (isBig) {
-			classes.push('is-big');
-		}
-
-		if (isHuge) {
-			classes.push('is-huge');
-		}
-
-		if (isRounded) {
-			classes.push('is-rounded');
-		}
-
-		if (isLight) {
-			classes.push('is-light');
-		}
-
-		if (isOutlined) {
-			classes.push('is-outlined');
-		}
-
-		if (isLoading) {
-			classes.push('is-loading');
-		}
-
-		if (isDisabled) {
-			classes.push('is-disabled');
-		}
+		isFullWidth && classes.push('is-fullwidth');
 
 		return classes.join(' ');
 	};
@@ -107,22 +66,7 @@ export const Button = ({
 			<button {...rest} className={`button h-button ${getButtonClasses()}`}>
 				{icon && (
 					<span className={`icon ${iconSmall && 'is-small'}`}>
-						<i data-feather="twitter">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								strokeWidth="2"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								className="feather feather-twitter"
-							>
-								<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-							</svg>
-						</i>
+						<i data-feather={iconType}></i>
 					</span>
 				)}
 
@@ -131,15 +75,3 @@ export const Button = ({
 		</>
 	);
 };
-
-/**
- * H-Button
- * Solid Colors
- * Light Colors
- * Outlined Colors
- * Elevated
- * Loading
- * Disabled
- * Feather Icons
- * Button Group
- */

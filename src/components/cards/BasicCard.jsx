@@ -16,14 +16,15 @@ export const BasicCard = ({
 	//
 
 	const getCardType = () => {
-		if (type === 's-card') {
-			return 's-card';
-		} else if (type === 'r-card') {
-			return 'r-card';
-		} else if (type === 'l-card') {
-			return 'l-card';
-		} else {
-			return '';
+		switch (type) {
+			case 's-card':
+				return 's-card';
+			case 'r-card':
+				return 'r-card';
+			case 'l-card':
+				return 'l-card';
+			default:
+				return '';
 		}
 	};
 
