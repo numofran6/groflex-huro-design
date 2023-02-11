@@ -23,12 +23,12 @@ export const Switch = ({
 
 	return (
 		<div className={label ? 'switch-block' : ''}>
-			<label class={`form-switch ${getSwitchClasses()}`}>
-				<input type="checkbox" class="is-switch" {...rest} />
+			<label className={`form-switch ${getSwitchClasses()}`}>
+				<input type="checkbox" className="is-switch" {...rest} />
 				<i></i>
 			</label>
 
-			<div class="text">
+			<div className="text">
 				<span>{label}</span>
 			</div>
 		</div>
