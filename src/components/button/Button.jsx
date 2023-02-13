@@ -66,7 +66,7 @@ export const Button = ({
 			<button {...rest} className={`button h-button ${getButtonClasses()}`}>
 				{icon && (
 					<span className={`icon ${iconSmall && 'is-small'}`}>
-						<i data-feather={iconType}></i>
+						<i className={`fas fa-${iconType}`}></i>
 					</span>
 				)}
 

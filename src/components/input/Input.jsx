@@ -68,7 +68,8 @@ export const Input = ({
 				{/* Icon */}
 				{hasIcon && (
 					<span className="form-icon">
-						<i data-feather={iconType}></i>
+						<i className={`fas fa-${iconType}`}></i>
+						{/* <i data-feather="activity"></i> */}
 					</span>
 				)}
 

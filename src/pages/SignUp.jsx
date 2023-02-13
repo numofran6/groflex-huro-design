@@ -67,7 +67,7 @@ export const SignUp = () => {
 														<Input
 															placeholder={'Email Address'}
 															hasIcon
-															iconType={'mail'}
+															iconType={'envelope'}
 														/>
 														<Input
 															placeholder={'Password'}
