@@ -13,6 +13,8 @@ export const Input = ({
 	hasSuccess,
 	hasError,
 	iconType,
+	value,
+	onChange,
 	...rest
 }) => {
 	const getFocusType = () => {
@@ -62,6 +64,8 @@ export const Input = ({
 					type="text"
 					className={`input ${getFocusType()} ${getInputClassOptions()}`}
 					placeholder={placeholder}
+					value={value}
+					onChange={onChange}
 					{...rest}
 				/>
 
