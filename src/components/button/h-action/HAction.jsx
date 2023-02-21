@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const HAction = ({ children, isRounded, isHover, isGrey }) => {
+export const HAction = ({ children, isRounded, isHover, isGrey, onClick }) => {
 	const getActionClasses = () => {
 		const classes = [];
 
@@ -15,7 +15,10 @@ export const HAction = ({ children, isRounded, isHover, isGrey }) => {
 
 	return (
 		<>
-			<button className={`button h-action ${getActionClasses()}`}>
+			<button
+				onClick={onClick}
+				className={`button h-action ${getActionClasses()}`}
+			>
 				{children}
 			</button>
 		</>

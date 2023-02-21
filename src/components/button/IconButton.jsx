@@ -21,6 +21,7 @@ export const IconButton = ({
 	icon,
 	iconSmall,
 	iconType,
+	onClick,
 	...rest
 }) => {
 	const getButtonClasses = () => {
@@ -54,7 +55,11 @@ export const IconButton = ({
 
 	return (
 		<>
-			<button {...rest} className={`button ${getButtonClasses()}`}>
+			<button
+				onClick={onClick}
+				{...rest}
+				className={`button ${getButtonClasses()}`}
+			>
 				{icon && (
 					<span className={`icon ${iconSmall && 'is-small'}`}>
 						<i className={`fas fa-${iconType}`}></i>

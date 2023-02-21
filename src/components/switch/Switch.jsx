@@ -7,6 +7,8 @@ export const Switch = ({
 	isInfo,
 	isWarning,
 	isDanger,
+	checked,
+	onChange,
 	rest,
 }) => {
 	const getSwitchClasses = () => {
@@ -24,7 +26,13 @@ export const Switch = ({
 	return (
 		<div className={label ? 'switch-block' : ''}>
 			<label className={`form-switch ${getSwitchClasses()}`}>
-				<input type="checkbox" className="is-switch" {...rest} />
+				<input
+					type="checkbox"
+					className="is-switch"
+					checked={checked}
+					onChange={onChange}
+					{...rest}
+				/>
 				<i></i>
 			</label>
 

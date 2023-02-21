@@ -24,6 +24,7 @@ export const Button = ({
 	isDisabled,
 	isFullWidth,
 	iconType,
+	onClick,
 	...rest
 }) => {
 	const getButtonClasses = () => {
@@ -63,7 +64,11 @@ export const Button = ({
 
 	return (
 		<>
-			<button {...rest} className={`button h-button ${getButtonClasses()}`}>
+			<button
+				onClick={onClick}
+				{...rest}
+				className={`button h-button ${getButtonClasses()}`}
+			>
 				{icon && (
 					<span className={`icon ${iconSmall && 'is-small'}`}>
 						<i className={`fas fa-${iconType}`}></i>

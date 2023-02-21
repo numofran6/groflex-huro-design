@@ -1,7 +1,5 @@
 import React from 'react';
 
-// interface styles {width: string, height: string}
-
 export const Input = ({
 	placeholder,
 	focusType,
@@ -105,25 +103,3 @@ export const Input = ({
 		</div>
 	);
 };
-
-/**
- * basic input
- * help text
- * rounded
- * focus colors
- * font awesome !!!icon not showing: fab fa-twitter
- * line icons !!!not showing: lnil lnil-briefcase
- * feather icons !!!not showing: data-feather="github"
- * loading input
- * Disabled Input
- * Validation !!!iconst not showing
- */
-
-{
-	/* <Input
-				placeholder="Search..."
-				focus="info"
-				helpText="Username is incorrect"
-				hasIcon
-			/> */
-}
