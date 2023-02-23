@@ -1,12 +1,12 @@
 import React from 'react';
-import bankingImgLight from '../assets/img/illustrations/apps/huro-banking-light.png';
-import bankingImgDark from '../assets/img/illustrations/apps/huro-banking-dark.png';
-import logoLight from '../assets/img/logos/logo/logo.svg';
-import logoDark from '../assets/img/logos/logo/logo-light.svg';
+import bankingImgLight from '../../assets/img/illustrations/apps/huro-banking-light.png';
+import bankingImgDark from '../../assets/img/illustrations/apps/huro-banking-dark.png';
+import logoLight from '../../assets/img/logos/logo/logo.svg';
+import logoDark from '../../assets/img/logos/logo/logo-light.svg';
 import { Link } from 'react-router-dom';
-import { Input } from '../components/input/Input';
-import { Button } from '../components/button/Button';
-import { Switch } from '../components/switch/Switch';
+import { Input } from '../../components/input/Input';
+import { Button } from '../../components/button/Button';
+import { Switch } from '../../components/switch/Switch';
 
 export const SignUp = () => {
 	return (

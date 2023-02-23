@@ -1,6 +1,7 @@
-export const BasicCard = ({
+export const AdvancedCard = ({
 	children,
 	type,
+	heading,
 	headingLeft,
 	headingRight,
 	isRaised,
@@ -12,20 +13,20 @@ export const BasicCard = ({
 	isDanger,
 	isFlat,
 	gutterBottom,
+	footer,
 	footerContentLeft,
 	footerContentRight,
-	headingDescription,
 }) => {
 	//
 
 	const getCardType = () => {
 		switch (type) {
 			case 's-card':
-				return 's-card';
+				return 's-card-advanced';
 			case 'r-card':
-				return 'r-card';
+				return 'r-card-advanced';
 			case 'l-card':
-				return 'l-card';
+				return 'l-card-advanced';
 			default:
 				return '';
 		}
@@ -54,26 +55,29 @@ export const BasicCard = ({
 
 	return (
 		<div className={`${getCardType()} ${getCardClasses()}`}>
-			<div className="card-head">
-				{/* Card Heading */}
-				<div className="left">
-					<h1 className="title is-6">{headingLeft}</h1>
-					<span>{headingDescription}</span>
-				</div>
+			{heading ? (
+				<div className="card-head">
+					{/* Card Heading */}
+					<div className="left">
+						<h1 className="title is-6">{headingLeft}</h1>
+					</div>
 
-				<h1 className="right">{headingRight}</h1>
-			</div>
+					<h1 className="right">{headingRight}</h1>
+				</div>
+			) : null}
 
 			<div className="card-body">
 				{/* Card Content */}
 				{children}
 			</div>
 
-			<div className="card-foot">
-				<div className="left">{footerContentLeft}</div>
+			{footer ? (
+				<div className="card-foot">
+					<div className="left">{footerContentLeft}</div>
 
-				<div className="right">{footerContentRight}</div>
-			</div>
+					<div className="right">{footerContentRight}</div>
+				</div>
+			) : null}
 		</div>
 	);
 };
