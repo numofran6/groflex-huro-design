@@ -118,7 +118,7 @@ export const AccountDetails = () => {
 												</div>
 											</AdvancedCard>
 
-											<div style={{ marginTop: '1.5rem' }} />
+											<div className="m-t-15" />
 
 											{/* COMPANY INFO */}
 											<AdvancedCard
@@ -225,7 +225,7 @@ export const AccountDetails = () => {
 												</div>
 											</AdvancedCard>
 
-											<div style={{ marginTop: '1.5rem' }} />
+											<div className="m-t-15" />
 
 											{/* YOUR PLAN */}
 											<AdvancedCard
