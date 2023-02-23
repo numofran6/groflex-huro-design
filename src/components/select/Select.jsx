@@ -5,13 +5,13 @@ export const Select = ({ options }) => {
 	const [active, setActive] = useState(false);
 
 	return (
-		<div class="control" onClick={() => setActive(!active)}>
-			<div class={`h-select ${active ? 'is-active' : ''}`}>
-				<div class="select-box">
+		<div className="control" onClick={() => setActive(!active)}>
+			<div className={`h-select ${active ? 'is-active' : ''}`}>
+				<div className="select-box">
 					<span>{options[0]}</span>
 				</div>
 
-				<div class="select-icon">
+				<div className="select-icon">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
@@ -28,8 +28,8 @@ export const Select = ({ options }) => {
 					</svg>
 				</div>
 
-				<div class="select-drop has-slimscroll-sm">
-					<div class="drop-inner">
+				<div className="select-drop has-slimscroll-sm">
+					<div className="drop-inner">
 						{options?.map((option) => (
 							<div className="option-row" key={option}>
 								<input type="radio" />
