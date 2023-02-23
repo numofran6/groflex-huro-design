@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const TextArea = ({ rows, placeholder, value, onChange }) => {
+export const TextArea = ({ rows, placeholder, value, onChange, ...rest }) => {
 	return (
 		<div className="control">
 			<textarea
@@ -9,6 +9,7 @@ export const TextArea = ({ rows, placeholder, value, onChange }) => {
 				placeholder={placeholder}
 				value={value}
 				onChange={onChange}
+				{...rest}
 			></textarea>
 		</div>
 	);

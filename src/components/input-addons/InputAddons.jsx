@@ -1,6 +1,13 @@
 import React from 'react';
 
-export const InputAddons = ({ left, right, placeholder }) => {
+export const InputAddons = ({
+	left,
+	right,
+	placeholder,
+	value,
+	onChange,
+	...rest
+}) => {
 	return (
 		<div className="field has-addons">
 			{left && (
@@ -10,7 +17,14 @@ export const InputAddons = ({ left, right, placeholder }) => {
 			)}
 
 			<div className="control is-expanded">
-				<input className="input" type="text" placeholder={placeholder} />
+				<input
+					className="input"
+					type="text"
+					placeholder={placeholder}
+					value={value}
+					onChange={onChange}
+					{...rest}
+				/>
 			</div>
 
 			{right && (
