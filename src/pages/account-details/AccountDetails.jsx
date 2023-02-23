@@ -208,8 +208,8 @@ export const AccountDetails = () => {
 													<Button isSuccess>View Form</Button>
 												}
 											>
-												<div className="chart-media">
-													<div className="meta">
+												<div className="columns is-multiline">
+													<div className="column is-8">
 														<h2 className="title is-6 is-bold">KYC Form</h2>
 
 														<p>
@@ -218,10 +218,7 @@ export const AccountDetails = () => {
 														</p>
 													</div>
 
-													<div
-														className="chart-container"
-														style={{ position: 'relative' }}
-													></div>
+													<div className="column is-4"></div>
 												</div>
 											</AdvancedCard>
 
