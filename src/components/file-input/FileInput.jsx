@@ -7,7 +7,7 @@ export const FileInput = ({ label, description }) => {
 				<label className="file-label">
 					<input className="file-input" type="file" />
 					<span className="file-cta">
-						<span className="file-icon">
+						<span className="file-icon" style={{ color: '#06d6a0' }}>
 							<i className="fas fa-upload"></i>{' '}
 							<span className="column">{label}</span>
 						</span>

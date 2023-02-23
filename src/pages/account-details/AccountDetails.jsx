@@ -86,7 +86,12 @@ export const AccountDetails = () => {
 															<label>Registered E-mail Address</label>
 															<InputAddons
 																placeholder={'Enter Details'}
-																right={<i class="fas fa-pen"></i>}
+																right={
+																	<i
+																		class="fas fa-pen"
+																		style={{ color: '#06d6a0' }}
+																	></i>
+																}
 															/>
 														</div>
 
