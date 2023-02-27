@@ -28,8 +28,8 @@ export const InputAddons = ({
 			</div>
 
 			{right && (
-				<div class="control">
-					<a class="button">{right}</a>
+				<div className="control">
+					<a className="button">{right}</a>
 				</div>
 			)}
 		</div>

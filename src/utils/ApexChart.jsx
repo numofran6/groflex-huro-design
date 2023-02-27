@@ -1,0 +1,64 @@
+import React, { useState } from 'react';
+import ReactApexChart from 'react-apexcharts';
+
+function ApexChart() {
+	const [chartState, setChartState] = useState({
+		series: [50],
+		options: {
+			chart: {
+				// height: 150,
+				type: 'radialBar',
+				// offsetY: -20,
+			},
+			plotOptions: {
+				radialBar: {
+					startAngle: -180,
+					endAngle: 180,
+					dataLabels: {
+						name: {
+							fontSize: '20px',
+							color: undefined,
+							offsetY: 10,
+						},
+						value: {
+							offsetY: -9,
+							fontSize: '15px',
+							color: '#039be5',
+							formatter: function (val) {
+								return val + '%';
+							},
+						},
+					},
+				},
+			},
+			fill: {
+				type: 'gradient',
+				gradient: {
+					shade: 'dark',
+					shadeIntensity: 0.15,
+					inverseColors: false,
+					opacityFrom: 1,
+					opacityTo: 1,
+					stops: [0, 50, 65, 91],
+				},
+			},
+			stroke: {
+				dashArray: 2,
+			},
+			labels: [''],
+		},
+	});
+
+	return (
+		<div>
+			<ReactApexChart
+				options={chartState.options}
+				series={chartState.series}
+				type="radialBar"
+				height={150}
+			/>
+		</div>
+	);
+}
+
+export default ApexChart;

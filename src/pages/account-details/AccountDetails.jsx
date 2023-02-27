@@ -6,6 +6,7 @@ import { InputAddons } from '../../components/input-addons/InputAddons';
 import { Input } from '../../components/input/Input';
 import { Select } from '../../components/select/Select';
 import { TextArea } from '../../components/textarea/TextArea';
+import ApexChart from '../../utils/ApexChart';
 
 export const AccountDetails = () => {
 	return (
@@ -88,7 +89,7 @@ export const AccountDetails = () => {
 																placeholder={'Enter Details'}
 																right={
 																	<i
-																		class="fas fa-pen"
+																		className="fas fa-pen"
 																		style={{ color: '#06d6a0' }}
 																	></i>
 																}
@@ -218,7 +219,9 @@ export const AccountDetails = () => {
 														</p>
 													</div>
 
-													<div className="column is-4"></div>
+													<div className="column is-4">
+														<ApexChart />
+													</div>
 												</div>
 											</AdvancedCard>
 
