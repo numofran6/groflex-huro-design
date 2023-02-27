@@ -11,7 +11,7 @@ export const FileInput = ({ label, description }) => {
 							<i className="fas fa-upload"></i>{' '}
 							<span className="column is-weight-700">{label}</span>
 						</span>
-						<span className="file-label m-t-5 m-b-5 ">
+						<span className="file-label m-t-10">
 							<p>{description}</p>
 						</span>
 					</span>

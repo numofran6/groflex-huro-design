@@ -132,68 +132,99 @@ export const AccountDetails = () => {
 													This details will appear in your invoices and expenses
 												</p>
 
-												<div className="columns is-multiline">
-													<div className="column is-6">
-														<div className="field">
-															<label>Company Name *</label>
-															<Input placeholder="Enter Details" />
+												<div>
+													<div className="columns is-multiline m-b-5">
+														<div className="column is-6">
+															<div className="field">
+																<label>Company Name *</label>
+																<Input placeholder="Enter Details" />
+															</div>
 														</div>
 
-														<div className="field">
-															<label>Company Logo</label>
-															<FileInput
-																label={'Upload logo'}
-																description={
-																	'(Upload jpeg/png image upto 2mb size)'
-																}
-															/>
-														</div>
-
-														<div className="field">
-															<label>Country *</label>
-															<Select options={['India']} />
-														</div>
-
-														<div className="field">
-															<label>E-mail Address</label>
-															<Input placeholder={'Enter Detials'} />
-														</div>
-
-														<div className="field">
-															<label>GST</label>
-															<Input placeholder={'E.g.,07AAAA0000AZ6'} />
+														<div className="column is-6">
+															<div className="field">
+																<label>Phone Number</label>
+																<InputAddons
+																	left={'+91'}
+																	placeholder={'Enter Details'}
+																/>
+															</div>
 														</div>
 													</div>
 
-													<div className="column is-6">
-														<div className="field">
-															<label>Phone Number</label>
-															<InputAddons
-																left={'+91'}
-																placeholder={'Enter Details'}
-															/>
+													<div className="columns is-multiline m-b-5">
+														<div className="column is-6">
+															<div className="field">
+																<label>Company Logo</label>
+																<FileInput
+																	label={'Upload logo'}
+																	description={
+																		'(Upload jpeg/png image upto 2mb size)'
+																	}
+																/>
+															</div>
 														</div>
 
-														<div className="field">
-															<label>Address</label>
-															<TextArea rows={3} placeholder="Enter Details" />
+														<div className="column is-6">
+															<div className="field">
+																<label>Address</label>
+																<TextArea
+																	rows={3}
+																	placeholder="Enter Details"
+																/>
+															</div>
+														</div>
+													</div>
+
+													<div className="columns is-multiline m-b-5">
+														<div className="column is-6">
+															<div className="field">
+																<label>Country *</label>
+																<Select options={['India']} />
+															</div>
 														</div>
 
-														<div className="field">
-															<label>State *</label>
-															<Select options={['Karnataka']} />
+														<div className="column is-6">
+															<div className="field">
+																<label>State *</label>
+																<Select options={['Karnataka']} />
+															</div>
+														</div>
+													</div>
+
+													<div className="columns is-multiline m-b-5">
+														<div className="column is-6">
+															<div className="field">
+																<label>E-mail Address</label>
+																<Input placeholder={'Enter Detials'} />
+															</div>
 														</div>
 
-														<div className="field">
-															<label>GST Type *</label>
-															<Select options={['Registered']} />
+														<div className="column is-6">
+															<div className="field">
+																<label>GST Type *</label>
+																<Select options={['Registered']} />
+															</div>
+														</div>
+													</div>
+
+													<div className="columns is-multiline">
+														<div className="column is-6">
+															<div className="field">
+																<label>GST</label>
+																<Input placeholder={'E.g.,07AAAA0000AZ6'} />
+															</div>
 														</div>
 
-														<div className="field">
-															<label>CIN</label>
-															<Input
-																placeholder={'E.g.,U 31909 WB 2020 PTC 247113'}
-															/>
+														<div className="column is-6">
+															<div className="field">
+																<label>CIN</label>
+																<Input
+																	placeholder={
+																		'E.g.,U 31909 WB 2020 PTC 247113'
+																	}
+																/>
+															</div>
 														</div>
 													</div>
 												</div>
