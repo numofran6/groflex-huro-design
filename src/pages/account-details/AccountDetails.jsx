@@ -169,7 +169,7 @@ export const AccountDetails = () => {
 															<div className="field">
 																<label>Address</label>
 																<TextArea
-																	rows={3}
+																	rows={2}
 																	placeholder="Enter Details"
 																/>
 															</div>
