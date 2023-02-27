@@ -10,6 +10,12 @@ function ApexChart() {
 				type: 'radialBar',
 				// offsetY: -20,
 			},
+			grid: {
+				padding: {
+					top: -23,
+					bottom: -23,
+				},
+			},
 			plotOptions: {
 				radialBar: {
 					startAngle: -180,
@@ -22,7 +28,7 @@ function ApexChart() {
 						},
 						value: {
 							offsetY: -9,
-							fontSize: '15px',
+							fontSize: '18px',
 							color: '#039be5',
 							formatter: function (val) {
 								return val + '%';
@@ -55,7 +61,7 @@ function ApexChart() {
 				options={chartState.options}
 				series={chartState.series}
 				type="radialBar"
-				height={150}
+				height={160}
 			/>
 		</div>
 	);

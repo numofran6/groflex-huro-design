@@ -176,7 +176,7 @@ export const AccountDetails = () => {
 
 														<div className="field">
 															<label>Address</label>
-															<TextArea rows={2} placeholder="Enter Details" />
+															<TextArea rows={3} placeholder="Enter Details" />
 														</div>
 
 														<div className="field">
@@ -248,7 +248,7 @@ export const AccountDetails = () => {
 														(renews automatically)
 													</p>
 
-													<div className="m-t-10 m-b-10">
+													<div className="m-t-5 m-b-5">
 														<progress
 															className="progress is-info"
 															value="50"
