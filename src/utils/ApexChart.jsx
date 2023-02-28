@@ -12,8 +12,8 @@ function ApexChart() {
 			},
 			grid: {
 				padding: {
-					top: -23,
-					bottom: -23,
+					top: -22,
+					bottom: -49,
 				},
 			},
 			plotOptions: {
