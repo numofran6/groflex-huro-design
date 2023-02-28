@@ -13,7 +13,7 @@ function ApexChart() {
 			grid: {
 				padding: {
 					top: -22,
-					bottom: -49,
+					bottom: -25,
 				},
 			},
 			plotOptions: {
