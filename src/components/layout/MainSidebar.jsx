@@ -4,10 +4,12 @@ import logo from '../../assets/img/logos/logo/logo.svg';
 import logoLight from '../../assets/img/logos/logo/logo-light.svg';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
+import { DropdownMenu } from '../dropdown-menu/DropdownMenu';
 
 export const MainSidebar = () => {
 	const { active } = useContext(sidebarToggleContext);
 	const [naver, setNaver] = useState(window.location.pathname);
+	const [showDropdownMenu, setShowDropdownMenu] = useState(false);
 
 	const routes = {
 		home: '/',
@@ -15,6 +17,7 @@ export const MainSidebar = () => {
 		elements: '/elements',
 		components: '/components',
 		chat: '/chat',
+		profile: 'profile',
 	};
 
 	const navLinkStyle = ({ isActive }) => {
@@ -52,6 +55,9 @@ export const MainSidebar = () => {
 		if (naver === routes.chat) {
 			return { marginTop: '406px' };
 		}
+		if (naver === routes.profile) {
+			return { marginTop: '214px', marginBottom: '64px' };
+		}
 	};
 
 	return (
@@ -64,7 +70,10 @@ export const MainSidebar = () => {
 			</div>
 
 			<div className="sidebar-inner">
-				<div className="naver" style={naverHandler()}></div>
+				<div
+					className={`naver ${naver === routes.profile ? 'from-bottom' : ''}`}
+					style={naverHandler()}
+				></div>
 
 				<ul className="icon-menu">
 					{/* Activity */}
@@ -203,6 +212,7 @@ export const MainSidebar = () => {
 				</ul>
 
 				<ul className="bottom-menu">
+					{/* Search */}
 					<li className="right-panel-trigger">
 						<NavLink to={'/dummy'} className={navLinkStyle}>
 							<svg
@@ -241,6 +251,7 @@ export const MainSidebar = () => {
 						</NavLink>
 					</li>
 
+					{/* Setting */}
 					<li>
 						<NavLink to={'/dummy'} className={navLinkStyle}>
 							<svg
@@ -261,14 +272,25 @@ export const MainSidebar = () => {
 						</NavLink>
 					</li>
 
+					{/* Profile */}
 					<li>
-						<div className="dropdown profile-dropdown dropdown-trigger is-spaced is-up">
+						<div
+							className={`dropdown profile-dropdown dropdown-trigger is-spaced is-up ${
+								showDropdownMenu ? 'is-active' : ''
+							} ${navLinkStyle}`}
+							onClick={() => {
+								setShowDropdownMenu(!showDropdownMenu);
+								setNaver(routes.profile);
+							}}
+						>
 							<img
 								src="https://via.placeholder.com/150x150"
 								data-demo-src="assets/img/avatars/photos/8.jpg"
 								alt=""
 							/>
 							<span className="status-indicator"></span>
+
+							<DropdownMenu />
 						</div>
 					</li>
 				</ul>

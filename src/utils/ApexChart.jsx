@@ -56,7 +56,7 @@ function ApexChart() {
 	});
 
 	return (
-		<div>
+		<div className="radial-wrap" style={{ position: 'relative' }}>
 			<ReactApexChart
 				options={chartState.options}
 				series={chartState.series}
