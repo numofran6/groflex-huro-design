@@ -81,42 +81,50 @@ export const AccountDetails = () => {
 											>
 												<h2 className="title is-6 is-bold">Profile Info</h2>
 
-												<div className="columns is-multiline">
-													<div className="column is-6">
-														<div className="field">
-															<label>Registered E-mail Address</label>
-															<InputAddons
-																placeholder={'Enter Details'}
-																right={
-																	<i
-																		className="fas fa-pen"
-																		style={{ color: '#06d6a0' }}
-																	></i>
-																}
-															/>
+												<>
+													<div className="columns is-multiline m-b-5">
+														<div className="column is-6">
+															<div className="field">
+																<label>Registered E-mail Address</label>
+																<InputAddons
+																	placeholder={'Enter Details'}
+																	right={
+																		<i
+																			className="fas fa-pen"
+																			style={{ color: '#06d6a0' }}
+																		></i>
+																	}
+																/>
+															</div>
 														</div>
 
-														<div className="field">
-															<label>First Name</label>
-															<Input placeholder={'Enter Detials'} />
+														<div className="column is-6">
+															<div className="field">
+																<label>Phone Number</label>
+																<InputAddons
+																	left={'+91'}
+																	placeholder={'Enter Details'}
+																/>
+															</div>
 														</div>
 													</div>
 
-													<div className="column is-6">
-														<div className="field">
-															<label>Phone Number</label>
-															<InputAddons
-																left={'+91'}
-																placeholder={'Enter Details'}
-															/>
+													<div className="columns is-multiline">
+														<div className="column is-6">
+															<div className="field">
+																<label>First Name</label>
+																<Input placeholder={'Enter Detials'} />
+															</div>
 														</div>
 
-														<div className="field">
-															<label>Last Name</label>
-															<Input placeholder={'Enter Detials'} />
+														<div className="column is-6">
+															<div className="field">
+																<label>Last Name</label>
+																<Input placeholder={'Enter Detials'} />
+															</div>
 														</div>
 													</div>
-												</div>
+												</>
 											</AdvancedCard>
 
 											<div className="m-t-15" />
@@ -132,7 +140,7 @@ export const AccountDetails = () => {
 													This details will appear in your invoices and expenses
 												</p>
 
-												<div>
+												<>
 													<div className="columns is-multiline m-b-5">
 														<div className="column is-6">
 															<div className="field">
@@ -227,7 +235,7 @@ export const AccountDetails = () => {
 															</div>
 														</div>
 													</div>
-												</div>
+												</>
 											</AdvancedCard>
 										</div>
 
