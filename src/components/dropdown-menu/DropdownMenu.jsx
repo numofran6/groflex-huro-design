@@ -53,6 +53,9 @@ export const DropdownMenu = () => {
 				<a href="#" className="dropdown-item is-media">
 					<div className="icon">
 						<i data-feather="clipboard"></i>
+
+						{/* <i class="lnil lnil-alarm"></i> */}
+						{/* <i class="lni lni-alarm"></i> */}
 					</div>
 					<div className="meta">
 						<span className="is-weight-300">Privacy Policy</span>

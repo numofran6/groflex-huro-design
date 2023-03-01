@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { sidebarToggleContext } from '../../context/sidebarToggle';
 import flag from '../../assets/img/icons/flags/united-states-of-america.svg';
 
-export const UserGridPageContent = () => {
+export const PageContent = () => {
 	const { active, handleActive } = useContext(sidebarToggleContext);
 
 	return (
@@ -92,6 +92,18 @@ export const UserGridPageContent = () => {
 
 					{/* Page Content */}
 					<div className="page-content-inner">
+						<p>
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem
+							natus debitis reprehenderit tempore expedita quasi id explicabo
+							placeat, voluptate perspiciatis saepe corrupti qui in ipsam facere
+							totam. Sint, porro! Deserunt?
+						</p>
+						<p>
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem
+							natus debitis reprehenderit tempore expedita quasi id explicabo
+							placeat, voluptate perspiciatis saepe corrupti qui in ipsam facere
+							totam. Sint, porro! Deserunt?
+						</p>
 						<p>
 							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem
 							natus debitis reprehenderit tempore expedita quasi id explicabo
