@@ -1,6 +1,12 @@
 import React from 'react';
+import { useEffect } from 'react';
+import feather from 'feather-icons';
 
 export const DropdownMenu = () => {
+	useEffect(() => {
+		feather.replace();
+	}, []);
+
 	return (
 		<div className="dropdown-menu">
 			<div className="dropdown-content">
@@ -19,7 +25,7 @@ export const DropdownMenu = () => {
 				{/* Content */}
 				<a href="#" className="dropdown-item is-media">
 					<div className="icon">
-						<i className="fas fa-question"></i>
+						<i data-feather="help-circle"></i>
 					</div>
 					<div className="meta">
 						<span className="is-weight-300">Account Details</span>
@@ -27,7 +33,7 @@ export const DropdownMenu = () => {
 				</a>
 				<a href="#" className="dropdown-item is-media">
 					<div className="icon">
-						<i className="fas fa-question"></i>
+						<i data-feather="help-circle"></i>
 					</div>
 					<div className="meta">
 						<span className="is-weight-300">Teams</span>
@@ -38,7 +44,7 @@ export const DropdownMenu = () => {
 
 				<a href="#" className="dropdown-item is-media">
 					<div className="icon">
-						<i className="fas fa-question"></i>
+						<i data-feather="help-circle"></i>
 					</div>
 					<div className="meta">
 						<span className="is-weight-300">Help</span>
@@ -46,7 +52,7 @@ export const DropdownMenu = () => {
 				</a>
 				<a href="#" className="dropdown-item is-media">
 					<div className="icon">
-						<i className="fas fa-sticky-note"></i>
+						<i data-feather="clipboard"></i>
 					</div>
 					<div className="meta">
 						<span className="is-weight-300">Privacy Policy</span>
@@ -57,7 +63,7 @@ export const DropdownMenu = () => {
 
 				<a href="#" className="dropdown-item is-media">
 					<div className="icon">
-						<i className="fas fa-sign-in-alt"></i>
+						<i data-feather="log-out"></i>
 					</div>
 					<div className="meta">
 						<span className="is-weight-300">Logout</span>
