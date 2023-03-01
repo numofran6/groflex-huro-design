@@ -51,7 +51,7 @@ export const SidebarPanel = () => {
 								<div className="simplebar-content">
 									<ul>
 										<li>
-											<a href="">Lorem Ipsum</a>
+											<a href="">Link 1</a>
 										</li>
 
 										<li
@@ -60,8 +60,7 @@ export const SidebarPanel = () => {
 										>
 											<div className="collapse-wrap">
 												<Link to={'#'} className="parent-link">
-													Lorem
-													<i data-feather="chevron-right"></i>
+													Link 2<i data-feather="chevron-right"></i>
 												</Link>
 											</div>
 
@@ -73,28 +72,28 @@ export const SidebarPanel = () => {
 												<li>
 													<a className="is-submenu" href="#">
 														<i data-feather="circle"></i>
-														Kwaku
+														Link 1
 													</a>
 												</li>
 
 												<li className="is-active">
 													<a className="is-submenu" href="#">
 														<i data-feather="circle"></i>
-														Kwame
+														Link 2
 													</a>
 												</li>
 
 												<li>
 													<a className="is-submenu" href="#">
 														<i data-feather="circle"></i>
-														Kojo
+														Link 3
 													</a>
 												</li>
 
 												<li>
 													<a className="is-submenu" href="#">
 														<i data-feather="circle"></i>
-														Kofi
+														Link 4
 													</a>
 												</li>
 											</ul>
@@ -106,8 +105,7 @@ export const SidebarPanel = () => {
 										>
 											<div className="collapse-wrap">
 												<Link to={'#'} className="parent-link">
-													Ipsum
-													<i data-feather="chevron-right"></i>
+													Link 3<i data-feather="chevron-right"></i>
 												</Link>
 											</div>
 
@@ -119,31 +117,95 @@ export const SidebarPanel = () => {
 												<li>
 													<a className="is-submenu" href="#">
 														<i data-feather="circle"></i>
-														Kwaku
+														Link 1
 													</a>
 												</li>
 
 												<li className="is-active">
 													<a className="is-submenu" href="#">
 														<i data-feather="circle"></i>
-														Kwame
+														Link 2
 													</a>
 												</li>
 
 												<li>
 													<a className="is-submenu" href="#">
 														<i data-feather="circle"></i>
-														Kojo
+														Link 3
 													</a>
 												</li>
 
 												<li>
 													<a className="is-submenu" href="#">
 														<i data-feather="circle"></i>
-														Kofi
+														Link 4
 													</a>
 												</li>
 											</ul>
+										</li>
+
+										<li>
+											<a href="">Link </a>
+										</li>
+										<li>
+											<a href="">Link </a>
+										</li>
+										<li>
+											<a href="">Link </a>
+										</li>
+										<li>
+											<a href="">Link </a>
+										</li>
+										<li>
+											<a href="">Link </a>
+										</li>
+										<li>
+											<a href="">Link </a>
+										</li>
+										<li>
+											<a href="">Link</a>
+										</li>
+										<li>
+											<a href="">Link</a>
+										</li>
+										<li>
+											<a href="">Link</a>
+										</li>
+										<li>
+											<a href="">Link</a>
+										</li>
+										<li>
+											<a href="">Link</a>
+										</li>
+										<li>
+											<a href="">Link</a>
+										</li>
+										<li>
+											<a href="">Link</a>
+										</li>
+										<li>
+											<a href="">Link</a>
+										</li>
+										<li>
+											<a href="">Link</a>
+										</li>
+										<li>
+											<a href="">Link</a>
+										</li>
+										<li>
+											<a href="">Link</a>
+										</li>
+										<li>
+											<a href="">Link</a>
+										</li>
+										<li>
+											<a href="">Link</a>
+										</li>
+										<li>
+											<a href="">Link</a>
+										</li>
+										<li>
+											<a href="">Link</a>
 										</li>
 									</ul>
 								</div>
@@ -151,6 +213,30 @@ export const SidebarPanel = () => {
 						</div>
 					</div>
 				</div>
+
+				{/* <div
+					className="simplebar-track simplebar-horizontal"
+					style={{ visibility: 'hidden' }}
+				>
+					<div
+						className="simplebar-scrollbar"
+						style={{ width: '0px', display: 'none' }}
+					></div>
+				</div>
+
+				<div
+					className="simplebar-track simplebar-vertical"
+					style={{ visibility: 'visible' }}
+				>
+					<div
+						className="simplebar-scrollbar"
+						style={{
+							height: '645px',
+							display: 'block',
+							transform: 'translate3d(0px, 6px, 0px)',
+						}}
+					></div>
+				</div> */}
 			</div>
 		</div>
 	);
