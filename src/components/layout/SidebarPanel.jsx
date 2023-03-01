@@ -143,100 +143,12 @@ export const SidebarPanel = () => {
 												</li>
 											</ul>
 										</li>
-
-										<li>
-											<a href="">Link </a>
-										</li>
-										<li>
-											<a href="">Link </a>
-										</li>
-										<li>
-											<a href="">Link </a>
-										</li>
-										<li>
-											<a href="">Link </a>
-										</li>
-										<li>
-											<a href="">Link </a>
-										</li>
-										<li>
-											<a href="">Link </a>
-										</li>
-										<li>
-											<a href="">Link</a>
-										</li>
-										<li>
-											<a href="">Link</a>
-										</li>
-										<li>
-											<a href="">Link</a>
-										</li>
-										<li>
-											<a href="">Link</a>
-										</li>
-										<li>
-											<a href="">Link</a>
-										</li>
-										<li>
-											<a href="">Link</a>
-										</li>
-										<li>
-											<a href="">Link</a>
-										</li>
-										<li>
-											<a href="">Link</a>
-										</li>
-										<li>
-											<a href="">Link</a>
-										</li>
-										<li>
-											<a href="">Link</a>
-										</li>
-										<li>
-											<a href="">Link</a>
-										</li>
-										<li>
-											<a href="">Link</a>
-										</li>
-										<li>
-											<a href="">Link</a>
-										</li>
-										<li>
-											<a href="">Link</a>
-										</li>
-										<li>
-											<a href="">Link</a>
-										</li>
 									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
-				{/* <div
-					className="simplebar-track simplebar-horizontal"
-					style={{ visibility: 'hidden' }}
-				>
-					<div
-						className="simplebar-scrollbar"
-						style={{ width: '0px', display: 'none' }}
-					></div>
-				</div>
-
-				<div
-					className="simplebar-track simplebar-vertical"
-					style={{ visibility: 'visible' }}
-				>
-					<div
-						className="simplebar-scrollbar"
-						style={{
-							height: '645px',
-							display: 'block',
-							transform: 'translate3d(0px, 6px, 0px)',
-						}}
-					></div>
-				</div> */}
 			</div>
 		</div>
 	);
