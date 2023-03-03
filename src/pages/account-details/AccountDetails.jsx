@@ -108,7 +108,7 @@ export const AccountDetails = () => {
 															<div className="field">
 																<label>Phone Number</label>
 																<InputAddons
-																	left={'+91'}
+																	leftValue={'+91'}
 																	placeholder={'Enter Details'}
 																/>
 															</div>
