@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import feather from 'feather-icons';
 
 export const Button = ({
 	children,
@@ -19,6 +20,7 @@ export const Button = ({
 	elevated,
 	isRaised,
 	icon,
+	hasIcon,
 	iconSmall,
 	isWhite,
 	isDisabled,
@@ -27,6 +29,10 @@ export const Button = ({
 	onClick,
 	...rest
 }) => {
+	useEffect(() => {
+		feather.replace();
+	}, []);
+
 	const getButtonClasses = () => {
 		const classes = [];
 
@@ -69,10 +75,8 @@ export const Button = ({
 				{...rest}
 				className={`button h-button ${getButtonClasses()}`}
 			>
-				{icon && (
-					<span className={`icon ${iconSmall && 'is-small'}`}>
-						<i className={`fas fa-${iconType}`}></i>
-					</span>
+				{hasIcon && (
+					<span className={`icon ${iconSmall && 'is-small'}`}>{icon}</span>
 				)}
 
 				<span>{children}</span>

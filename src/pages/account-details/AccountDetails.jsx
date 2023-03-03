@@ -151,7 +151,11 @@ export const AccountDetails = () => {
 														<div className="column is-6">
 															<div className="field">
 																<label>Company Name *</label>
-																<Input placeholder="Enter Details" />
+																<Input
+																	placeholder="Enter Details"
+																	hasError
+																	helpText="Should not be empty"
+																/>
 															</div>
 														</div>
 

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import feather from 'feather-icons';
 
 export const Input = ({
 	placeholder,
@@ -10,11 +11,16 @@ export const Input = ({
 	hasValidation,
 	hasSuccess,
 	hasError,
-	iconType,
+	icon,
+	validationIcon,
 	value,
 	onChange,
 	...rest
 }) => {
+	useEffect(() => {
+		feather.replace();
+	}, []);
+
 	const getFocusType = () => {
 		switch (focusType) {
 			case 'primary':
@@ -68,24 +74,16 @@ export const Input = ({
 				/>
 
 				{/* Icon */}
-				{hasIcon && (
-					<span className="form-icon">
-						<i className={`fas fa-${iconType}`}></i>
-					</span>
-				)}
+				{hasIcon && <span className="form-icon">{icon}</span>}
 
 				{/* Validation Success */}
 				{hasValidation && hasSuccess && (
-					<div className="validation-icon is-success">
-						<i data-feather="check"></i>
-					</div>
+					<div className="validation-icon is-success">{validationIcon}</div>
 				)}
 
 				{/* Validation Error */}
-				{hasValidation && hasSuccess && (
-					<div className="validation-icon is-error">
-						<i data-feather="x"></i>
-					</div>
+				{hasValidation && hasError && (
+					<div className="validation-icon is-error">{validationIcon}</div>
 				)}
 
 				{/* Helper text */}
