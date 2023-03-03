@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button } from '../../components/button/Button';
 import { AdvancedCard } from '../../components/cards/AdvancedCard';
 import { FileInput } from '../../components/file-input/FileInput';
@@ -6,19 +6,25 @@ import { InputAddons } from '../../components/input-addons/InputAddons';
 import { Input } from '../../components/input/Input';
 import { Select } from '../../components/select/Select';
 import { TextArea } from '../../components/textarea/TextArea';
+import { sidebarToggleContext } from '../../context/sidebarToggle';
 import ApexChart from '../../utils/ApexChart';
 
 export const AccountDetails = () => {
+	const { active, handleActive } = useContext(sidebarToggleContext);
+
 	return (
 		<>
-			<div className="view-wrapper is-pushed-full">
+			<div className={`view-wrapper ${active ? 'is-pushed-full' : ''}`}>
 				<div className="page-content-wrapper">
 					<div className="page-content is-relative">
 						<div className="page-title has-text-centered">
 							{/* Sidebar Trigger */}
 							<div className="huro-hamburger nav-trigger push-resize">
 								<span className="menu-toggle has-chevron">
-									<span className={`icon-box-toggle`}>
+									<span
+										className={`icon-box-toggle ${active ? 'active' : ''}`}
+										onClick={handleActive}
+									>
 										<span className="rotate">
 											<i className="icon-line-top"></i>
 											<i className="icon-line-center"></i>

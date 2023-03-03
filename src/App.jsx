@@ -8,13 +8,15 @@ import { SignUp } from './pages/signup/SignUp';
 function App() {
 	return (
 		<>
-			<>
+			{/* <>
 				<MainSidebar />
 				<SidebarPanel />
 				<PageContent />
-			</>
+			</> */}
 
-			<>{/* <AccountDetails /> */}</>
+			<>
+				<AccountDetails />
+			</>
 
 			<>{/* <SignUp /> */}</>
 		</>
