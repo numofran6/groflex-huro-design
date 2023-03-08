@@ -93,6 +93,7 @@ export const AccountDetails = () => {
 															<div className="field">
 																<label>Registered E-mail Address</label>
 																<InputAddons
+																	type={'text'}
 																	placeholder={'Enter Details'}
 																	right={
 																		<i
@@ -108,6 +109,7 @@ export const AccountDetails = () => {
 															<div className="field">
 																<label>Phone Number</label>
 																<InputAddons
+																	type={'text'}
 																	left={'+91'}
 																	placeholder={'Enter Details'}
 																/>
@@ -118,6 +120,7 @@ export const AccountDetails = () => {
 													<div className="columns is-multiline">
 														<div className="column is-6">
 															<Input
+																type={'text'}
 																label={'First Name'}
 																placeholder={'Enter Detials'}
 															/>
@@ -151,6 +154,7 @@ export const AccountDetails = () => {
 													<div className="columns is-multiline m-b-5">
 														<div className="column is-6">
 															<Input
+																type={'text'}
 																label={'Company Name *'}
 																placeholder="Enter Details"
 																isError
@@ -162,6 +166,7 @@ export const AccountDetails = () => {
 															<div className="field">
 																<label>Phone Number</label>
 																<InputAddons
+																	type={'text'}
 																	left={'+91'}
 																	placeholder={'Enter Details'}
 																/>
@@ -212,6 +217,7 @@ export const AccountDetails = () => {
 													<div className="columns is-multiline m-b-5">
 														<div className="column is-6">
 															<Input
+																type={'text'}
 																label={'E-mail Address'}
 																placeholder={'Enter Detials'}
 															/>
@@ -228,6 +234,7 @@ export const AccountDetails = () => {
 													<div className="columns is-multiline">
 														<div className="column is-6">
 															<Input
+																type={'text'}
 																label={'GST'}
 																placeholder={'E.g.,07AAAA0000AZ6'}
 															/>
@@ -235,6 +242,7 @@ export const AccountDetails = () => {
 
 														<div className="column is-6">
 															<Input
+																type={'text'}
 																label={'CIN'}
 																placeholder={'E.g.,U 31909 WB 2020 PTC 247113'}
 															/>

@@ -7,6 +7,7 @@ export const InputAddons = ({
 	value,
 	onChange,
 	label,
+	type,
 	...rest
 }) => {
 	return (
@@ -20,7 +21,7 @@ export const InputAddons = ({
 			<div className="control is-expanded">
 				<input
 					className="input"
-					type="text"
+					type={type}
 					placeholder={placeholder}
 					value={value}
 					onChange={onChange}
