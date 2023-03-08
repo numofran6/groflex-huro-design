@@ -60,24 +60,28 @@ export const SignUp = () => {
 												<form>
 													<div className="login-form">
 														<Input
+															type={'text'}
 															placeholder={'Username'}
 															hasIcon
-															iconType={'user'}
+															icon={<i class="fas fa-user"></i>}
 														/>
 														<Input
+															type={'text'}
 															placeholder={'Email Address'}
 															hasIcon
-															iconType={'envelope'}
+															icon={<i class="fas fa-envelope"></i>}
 														/>
 														<Input
+															type={'text'}
 															placeholder={'Password'}
 															hasIcon
-															iconType={'lock'}
+															icon={<i class="fas fa-lock"></i>}
 														/>
 														<Input
+															type={'text'}
 															placeholder={'Repeat Password'}
 															hasIcon
-															iconType={'lock'}
+															icon={<i class="fas fa-lock"></i>}
 														/>
 
 														<div className="setting-item">

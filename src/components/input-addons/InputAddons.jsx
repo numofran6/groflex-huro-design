@@ -1,18 +1,19 @@
 import React from 'react';
 
 export const InputAddons = ({
-	leftValue,
-	rightValue,
+	left,
+	right,
 	placeholder,
 	value,
 	onChange,
+	label,
 	...rest
 }) => {
 	return (
 		<div className="field has-addons">
-			{leftValue && (
+			{left && (
 				<div className="control">
-					<a className="button is-static">{leftValue}</a>
+					<a className="button is-static">{left}</a>
 				</div>
 			)}
 
@@ -27,9 +28,9 @@ export const InputAddons = ({
 				/>
 			</div>
 
-			{rightValue && (
+			{right && (
 				<div className="control">
-					<a className="button">{rightValue}</a>
+					<a className="button">{right}</a>
 				</div>
 			)}
 		</div>

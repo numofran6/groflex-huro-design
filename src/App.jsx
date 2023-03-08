@@ -18,7 +18,9 @@ function App() {
 				<AccountDetails />
 			</>
 
-			<>{/* <SignUp /> */}</>
+			{/* <>
+				<SignUp />
+			</> */}
 		</>
 	);
 }

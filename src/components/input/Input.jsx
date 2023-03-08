@@ -8,13 +8,14 @@ export const Input = ({
 	isRounded,
 	hasIcon,
 	isLoading,
-	hasValidation,
-	hasSuccess,
-	hasError,
+	isSuccess,
+	isError,
 	icon,
 	validationIcon,
 	value,
 	onChange,
+	label,
+	type,
 	...rest
 }) => {
 	useEffect(() => {
@@ -54,18 +55,20 @@ export const Input = ({
 
 		isLoading && classes.push('is-loading');
 
-		hasValidation && hasSuccess && classes.push('has-validation has-success');
+		validationIcon && isSuccess && classes.push('has-validation has-success');
 
-		hasValidation && hasError && classes.push('has-validation has-error');
+		validationIcon && isError && classes.push('has-validation has-error');
 
 		return classes.join(' ');
 	};
 
 	return (
 		<div className="field">
+			{label && <label>{label}</label>}
+
 			<div className={`control ${getControlClassOptions()}`}>
 				<input
-					type="text"
+					type={type}
 					className={`input ${getFocusType()} ${getInputClassOptions()}`}
 					placeholder={placeholder}
 					value={value}
@@ -77,12 +80,12 @@ export const Input = ({
 				{hasIcon && <span className="form-icon">{icon}</span>}
 
 				{/* Validation Success */}
-				{hasValidation && hasSuccess && (
+				{validationIcon && isSuccess && (
 					<div className="validation-icon is-success">{validationIcon}</div>
 				)}
 
 				{/* Validation Error */}
-				{hasValidation && hasError && (
+				{validationIcon && isError && (
 					<div className="validation-icon is-error">{validationIcon}</div>
 				)}
 
@@ -90,7 +93,7 @@ export const Input = ({
 				{helpText && (
 					<p
 						className={`help ${
-							hasSuccess ? 'success-text' : hasError ? 'danger-text' : ''
+							isSuccess ? 'success-text' : isError ? 'danger-text' : ''
 						}`}
 					>
 						{helpText}

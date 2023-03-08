@@ -108,7 +108,7 @@ export const AccountDetails = () => {
 															<div className="field">
 																<label>Phone Number</label>
 																<InputAddons
-																	leftValue={'+91'}
+																	left={'+91'}
 																	placeholder={'Enter Details'}
 																/>
 															</div>
@@ -117,17 +117,18 @@ export const AccountDetails = () => {
 
 													<div className="columns is-multiline">
 														<div className="column is-6">
-															<div className="field">
-																<label>First Name</label>
-																<Input placeholder={'Enter Detials'} />
-															</div>
+															<Input
+																label={'First Name'}
+																placeholder={'Enter Detials'}
+															/>
 														</div>
 
 														<div className="column is-6">
-															<div className="field">
-																<label>Last Name</label>
-																<Input placeholder={'Enter Detials'} />
-															</div>
+															<Input
+																type={'text'}
+																label="Last Name"
+																placeholder={'Enter Detials'}
+															/>
 														</div>
 													</div>
 												</>
@@ -149,14 +150,12 @@ export const AccountDetails = () => {
 												<>
 													<div className="columns is-multiline m-b-5">
 														<div className="column is-6">
-															<div className="field">
-																<label>Company Name *</label>
-																<Input
-																	placeholder="Enter Details"
-																	hasError
-																	helpText="Should not be empty"
-																/>
-															</div>
+															<Input
+																label={'Company Name *'}
+																placeholder="Enter Details"
+																isError
+																helpText="Should not be empty"
+															/>
 														</div>
 
 														<div className="column is-6">
@@ -212,10 +211,10 @@ export const AccountDetails = () => {
 
 													<div className="columns is-multiline m-b-5">
 														<div className="column is-6">
-															<div className="field">
-																<label>E-mail Address</label>
-																<Input placeholder={'Enter Detials'} />
-															</div>
+															<Input
+																label={'E-mail Address'}
+																placeholder={'Enter Detials'}
+															/>
 														</div>
 
 														<div className="column is-6">
@@ -228,21 +227,17 @@ export const AccountDetails = () => {
 
 													<div className="columns is-multiline">
 														<div className="column is-6">
-															<div className="field">
-																<label>GST</label>
-																<Input placeholder={'E.g.,07AAAA0000AZ6'} />
-															</div>
+															<Input
+																label={'GST'}
+																placeholder={'E.g.,07AAAA0000AZ6'}
+															/>
 														</div>
 
 														<div className="column is-6">
-															<div className="field">
-																<label>CIN</label>
-																<Input
-																	placeholder={
-																		'E.g.,U 31909 WB 2020 PTC 247113'
-																	}
-																/>
-															</div>
+															<Input
+																label={'CIN'}
+																placeholder={'E.g.,U 31909 WB 2020 PTC 247113'}
+															/>
 														</div>
 													</div>
 												</>
