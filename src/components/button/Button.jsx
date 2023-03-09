@@ -20,7 +20,6 @@ export const Button = ({
 	elevated,
 	isRaised,
 	icon,
-	hasIcon,
 	iconSmall,
 	isWhite,
 	isDisabled,
@@ -71,11 +70,11 @@ export const Button = ({
 	return (
 		<>
 			<button
+				className={`button h-button ${getButtonClasses()}`}
 				onClick={onClick}
 				{...rest}
-				className={`button h-button ${getButtonClasses()}`}
 			>
-				{hasIcon && (
+				{icon && (
 					<span className={`icon ${iconSmall && 'is-small'}`}>{icon}</span>
 				)}
 

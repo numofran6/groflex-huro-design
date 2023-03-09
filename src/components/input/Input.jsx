@@ -16,6 +16,9 @@ export const Input = ({
 	onChange,
 	label,
 	type,
+	size,
+	maxLength,
+	minLength,
 	...rest
 }) => {
 	useEffect(() => {
@@ -73,6 +76,9 @@ export const Input = ({
 					placeholder={placeholder}
 					value={value}
 					onChange={onChange}
+					size={size}
+					maxLength={maxLength}
+					minLength={minLength}
 					{...rest}
 				/>
 
